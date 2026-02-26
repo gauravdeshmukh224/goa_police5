@@ -87,7 +87,17 @@ body {
     margin-left: 280px;
     background: #fafafa;
     min-height: 100vh;
+    /* make sure content has consistent inner padding so sections align */
+    padding: 30px 20px;
 } 
+
+/* Standardize section widths inside main content so all boxes align */
+.main-content > section {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
 
 /* ===== LAYOUT ===== */
 .container {
@@ -309,7 +319,7 @@ body {
 .hero-section {
     padding: 40px;
     background:  linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
-    margin: 30px;
+    margin: 0 auto 30px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -603,7 +613,8 @@ body {
 
 .quick-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* allow cards to wrap and stay aligned across viewports */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -665,7 +676,8 @@ body {
 /* ===== NAVIGATION CARDS ===== */
 .navigation-cards {
     padding: 30px 20px;
-    margin: 20px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -826,7 +838,8 @@ body {
 /* ===== INFO CARDS ===== */
 .info-cards {
     padding: 30px 20px;
-    margin: 20px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -1075,8 +1088,10 @@ body {
 
 /* ===== HELPLINE SECTION ===== */
 .helpline-section {
+    z-index: 1000;
     padding: 15px 10px;
-    margin: 10px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
     background:  linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
     border-radius: 10px;
     color: white;
@@ -1365,7 +1380,8 @@ body {
 /* ===== ABOUT SECTION ===== */
 .about-section {
     padding: 15px 10px;
-    margin: 10px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 10px;
     color: white;
@@ -1610,8 +1626,11 @@ body{
         flex-direction: column;
     }
 
+    /* sidebar stacks above content but keep a max-width so it doesn't feel huge */
     .sidebar {
-        width: 100%;
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
         height: auto;
         position: relative;
         order: -1;
@@ -2193,12 +2212,13 @@ body{
     .container { margin-top: 100px; }
     .main-content { padding: 16px; }
 
-    /* make off-canvas sidebar fill appropriate width on phones */
+    /* make off-canvas sidebar narrower and capped on phones */
     .sidebar {
         top: 100px;
         height: calc(100vh - 100px);
         left: -100%;
-        width: 100%;
+        width: 80%;
+        max-width: 320px;
     }
     .sidebar.show-sidebar,
     .sidebar.open { left: 0; width: 80%; max-width: 320px; }
@@ -2208,12 +2228,20 @@ body{
     .mla-header h1 { font-size: 20px; }
     .mla-header .header-logo { width: 40px; }
     .container { margin-top: 90px; }
-    .main-content { padding: 12px; }
+    .main-content { padding: 1px; }
     body { font-size: 14px; }
 
     /* dropdowns shorter on very small screens */
     .dropdown-content { max-height: calc(100vh - 120px); }
 
+    /* cap the sidebar to avoid taking entire screen on tiny phones */
+    .sidebar {
+        width: 90%;
+        max-width: 280px;
+    }
     .sidebar.show-sidebar,
-    .sidebar.open { width: 100%; max-width: none; }
+    .sidebar.open {
+        width: 90%;
+        max-width: 280px;
+    }
 }
