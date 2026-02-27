@@ -91,3 +91,14 @@ document.addEventListener('click', function(e) {
         }
     });
 })();
+
+// adjust container top margin based on header height to avoid extra whitespace
+function adjustContainerSpacing() {
+    const header = document.querySelector('.mla-header');
+    const container = document.querySelector('.container');
+    if (header && container) {
+        container.style.marginTop = header.offsetHeight + 'px';
+    }
+}
+window.addEventListener('load', adjustContainerSpacing);
+window.addEventListener('resize', adjustContainerSpacing);
