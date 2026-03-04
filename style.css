@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 body {
@@ -21,10 +22,10 @@ body {
     top: 0;
     left: 0;
     z-index: 2000;
-    background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5b6ca8 0%, #5768a5 100%);
     padding: clamp(15px, 5vw, 50px) clamp(10px, 4vw, 40px);
     color: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.552);
     overflow: visible;
 }
 
@@ -133,7 +134,7 @@ body {
 
 .sidebar {
     width: 280px;
-    background: linear-gradient(135deg, #313857 0%, #764ba2 100%);
+    background:  linear-gradient(135deg, #5b6ca8 0%, #5768a5 100%);
     color: white;
     position: fixed;
     height: calc(100vh - 190px);
@@ -149,14 +150,14 @@ body {
 /* Sidebar Menu */
 .sidebar-menu {
     list-style: none;
-    padding: 15px 8px;
+    padding: 0 4px; /* remove extra horizontal padding */
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
 .sidebar-menu li {
-    margin-bottom: 8px;
+    margin: 2px 0; /* tighter vertical spacing */
     border: 2px solid rgba(255,255,255,0.2);
     border-radius: 6px;
     background: rgba(255,255,255,0.05);
@@ -197,14 +198,14 @@ body {
 .sidebar-menu li a.active {
     background: linear-gradient(135deg, rgba(52,152,219,0.2), rgba(41,128,185,0.2));
     color: #ecf0f1;
-    border-left-color: #3498db;
+    border-left-color: #cf812e;
     transform: translateX(3px);
     box-shadow: 0 2px 8px rgba(52,152,219,0.3);
 }
 
 .sidebar-menu li:has(> a:hover),
 .sidebar-menu li:has(> a.active) {
-    border-color: #3498db;
+    border-color: #aa6817;
     background: rgba(52,152,219,0.1);
     box-shadow: 0 0 8px rgba(52,152,219,0.2);
 }
@@ -220,7 +221,7 @@ body {
 /* Dropdown inside sidebar */
 .sidebar-menu .dropdown-content {
     display: none;
-    background: rgba(133,98,54,0.8);
+    background: rgba(185, 151, 109, 0.8);
     list-style: none;
     margin: 4px 0 0;
     padding: 6px 0;
@@ -293,7 +294,7 @@ body {
 .main-content {
     flex: 1;
     margin-left: 280px;
-    background: #fafafa;
+    background: #1b2e56;
     min-height: 100vh;
     padding: clamp(12px, 3vw, 30px) clamp(10px, 2vw, 20px);
     transition: margin-left 0.3s ease;
@@ -309,7 +310,7 @@ body {
 /* ===== HERO SECTION ===== */
 .hero-section {
     padding: clamp(20px, 4vw, 40px);
-    background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #F8FAFC 0%, #F8FAFC 100%);
     margin: 0 auto 30px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -389,7 +390,7 @@ body {
 }
 
 .hero-info {
-    color: white;
+    color: rgb(5, 2, 2);
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -399,49 +400,49 @@ body {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.33);
     border-left: 4px solid #3498db;
     transition: all 0.3s ease;
 }
 
 .info-card:hover {
     background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
-    color: white;
+    color: rgb(9, 2, 2);
     box-shadow: 0 18px 45px rgba(74,2,2,0.25);
     transform: translateY(-12px) scale(1.03);
     border-top-color: #9d93c0;
 }
 
 .info-card h3 {
-    color: #f3f6f8;
+    color: #050505;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-bottom: 15px;
     font-weight: 600;
 }
 
 .info-card:hover h3 {
-    color: #ffffff;
+    color: #000000;
 }
 
 .info-card p {
-    color: #e0e0e0;
+    color: #000000;
     line-height: 1.6;
     margin-bottom: 20px;
     font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .info-card:hover p {
-    color: #f0f9f5;
+    color: #080909;
 }
 
 .learn-more {
-    color: #fefefe;
+    color: #0f0d0d;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 .learn-more:hover {
-    color: #f3f6f8;
+    color: #181819;
 }
 
 .stats-grid {
@@ -485,14 +486,14 @@ body {
 }
 
 .dgp-section h2 {
-    color: #f4f5f6;
+    color: #0c0e10;
     margin-bottom: 25px;
     font-size: clamp(1.3rem, 4vw, 1.8rem);
     font-weight: 600;
 }
 
 .dgp-box {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -519,14 +520,14 @@ body {
 }
 
 .dgp-content p {
-    color: #555;
+    color: #424040;
     line-height: 1.6;
     margin-bottom: 20px;
     font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .btn {
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    background: linear-gradient(135deg, #1e1919 0%, #3e3838 100%);
     color: white;
     border: none;
     padding: 12px 25px;
@@ -546,7 +547,7 @@ body {
 }
 
 .quick-access h2 {
-    color: #f7f3f3;
+    color: #0b0909;
     margin-bottom: 25px;
     font-size: clamp(1.5rem, 4vw, 1.875rem);
     font-weight: 600;
@@ -585,6 +586,22 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
 }
 
+/* Shared elevated hover for section boxes and cards */
+.shared-elevated-hover:hover,
+.quick-card:hover,
+.nav-card:hover,
+.info-card:hover,
+.service-item:hover,
+.about-card:hover,
+.stat-item:hover,
+.dgp-box:hover,
+.helpline-info:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-color: #3498db;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
 .quick-card img {
     width: 70px;
     height: 70px;
@@ -607,48 +624,51 @@ body {
 
 /* ===== NAVIGATION CARDS ===== */
 .navigation-cards {
-    padding: 30px 20px;
+    padding: 35px 20px;
     margin: 0 auto 30px;
     max-width: 1200px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    border: 1px solid rgba(52,152,219,0.15);
 }
 
 .navigation-cards h2 {
-    color: #2c3e50;
+    color: #1b2e56;
     text-align: center;
-    margin-bottom: 25px;
-    font-size: clamp(1.5rem, 5vw, 1.75rem);
+    margin-bottom: 35px;
+    font-size: clamp(1.4rem, 5vw, 1.7rem);
     font-weight: 700;
     position: relative;
+    letter-spacing: 0.5px;
 }
 
 .navigation-cards h2::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, #abafb1, #b4bdc3);
+    background: linear-gradient(90deg, #3498db, #764ba2);
     border-radius: 2px;
+    box-shadow: 0 4px 15px rgba(52,152,219,0.3);
 }
 
 .nav-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
 }
 
 .nav-card {
-    background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
-    padding: 35px 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    border-left: 4px solid #f3f6f8;
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+    padding: 25px 22px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(52,152,219,0.12);
+    border: 2px solid rgba(52,152,219,0.15);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
 }
@@ -659,41 +679,74 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #3498db, #2980b9);
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #764ba2, #2980b9);
     transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+}
+
+.nav-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(52,152,219,0.1), transparent);
+    transition: left 0.6s ease;
 }
 
 .nav-card:hover::before {
     transform: scaleX(1);
 }
 
+.nav-card:hover::after {
+    left: 100%;
+}
+
 .nav-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    border-left-color: #2980b9;
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(52,152,219,0.25);
+    border-color: rgba(52,152,219,0.4);
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
 }
 
 .nav-card-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #3498db 0%, #764ba2 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(52,152,219,0.3);
+    font-size: 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 20px rgba(52,152,219,0.35);
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-card:hover .nav-card-icon {
+    transform: scale(1.15) rotate(-5deg);
+    background: linear-gradient(135deg, #764ba2 0%, #3498db 100%);
+    box-shadow: 0 8px 25px rgba(118,75,162,0.4);
 }
 
 .nav-card h3 {
-    color: #f0f1f3;
-    margin-bottom: 20px;
-    font-size: clamp(1.2rem, 3vw, 1.375rem);
-    font-weight: 600;
+    color: #1b2e56;
+    margin-bottom: 15px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-card:hover h3 {
+    color: #3498db;
 }
 
 .nav-card ul {
@@ -703,31 +756,59 @@ body {
 }
 
 .nav-card li {
-    margin-bottom: 12px;
-    padding-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 18px;
     position: relative;
 }
 
 .nav-card li::before {
-    content: '▶';
+    content: '';
     position: absolute;
     left: 0;
-    color: #227fb6;
-    font-size: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #3498db, #764ba2);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.nav-card li:hover::before {
+    background: linear-gradient(135deg, #764ba2, #3498db);
+    transform: translateY(-50%) scale(1.4);
 }
 
 .nav-card a {
-    color: #f4efef;
+    color: #2c3e50;
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
     display: block;
-    padding: 5px 0;
+    padding: 4px 0;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    position: relative;
+    z-index: 1;
+}
+
+.nav-card a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3498db, #764ba2);
+    transition: width 0.3s ease;
 }
 
 .nav-card a:hover {
-    color: #edf1f3;
-    transform: translateX(5px);
+    color: #3498db;
+    transform: translateX(4px);
+}
+
+.nav-card a:hover::before {
+    width: 100%;
 }
 
 /* Nested stations */
@@ -736,7 +817,19 @@ body {
     padding: 0;
     margin: 0;
     display: none;
-    margin-top: 5px;
+    margin-top: 8px;
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .nav-card li:hover > .nested-stations {
@@ -744,12 +837,19 @@ body {
 }
 
 .nested-stations li {
-    margin-bottom: 0;
-    padding: 12px 15px;
-    background: #4a9fa5;
-    margin-top: 3px;
-    border-radius: 4px;
-    padding-left: 15px;
+    margin-bottom: 6px;
+    padding: 10px 12px 10px 12px;
+    background: linear-gradient(135deg, rgba(52,152,219,0.1) 0%, rgba(118,75,162,0.08) 100%);
+    margin-top: 4px;
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.nested-stations li:hover {
+    background: linear-gradient(135deg, rgba(52,152,219,0.2) 0%, rgba(118,75,162,0.15) 100%);
+    border-left-color: #764ba2;
+    padding-left: 16px;
 }
 
 .nested-stations li::before {
@@ -757,14 +857,20 @@ body {
 }
 
 .nested-stations a {
-    color: #ffffff;
+    color: #2c3e50;
     font-weight: 500;
-    font-size: 14px;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
     padding: 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .nested-stations a:hover {
-    color: #f4efef;
+    color: #3498db;
+}
+
+.nested-stations a:hover {
+    color: #110c0c;
 }
 
 /* ===== INFO CARDS ===== */
@@ -772,14 +878,14 @@ body {
     padding: 30px 20px;
     margin: 0 auto 30px;
     max-width: 1200px;
-    background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f1 100%);
     border-radius: 15px;
-    color: white;
+    color: rgb(235, 235, 235);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .info-cards h2 {
-    color: #f3f6f8;
+    color: #0d0e0f;
     text-align: center;
     margin-bottom: 25px;
     font-size: clamp(1.5rem, 5vw, 1.75rem);
@@ -795,7 +901,7 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: rgba(255,255,255,0.8);
+    background: rgb(241, 239, 239);
     border-radius: 2px;
 }
 
@@ -807,11 +913,11 @@ body {
 
 /* Already have .info-card defined above, but we'll add extra styles */
 .info-card {
-    background: rgba(255,255,255,0.1);
+    background: rgba(64, 55, 55, 0.1);
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    color: white;
+    color: rgb(255, 250, 250);
     transition: all 0.3s ease;
 }
 
@@ -820,7 +926,7 @@ body {
     height: 60px;
     border-radius: 50%;
     margin-bottom: 15px;
-    border: 2px solid rgba(255,255,255,0.6);
+    border: 2px solid rgba(169, 40, 40, 0.779);
     transition: transform 0.3s ease;
 }
 
@@ -830,12 +936,12 @@ body {
 
 .card-link {
     display: inline-block;
-    color: #f3f6f8;
+    color: #b94920;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
     transition: all 0.3s ease;
-    border: 2px solid #f3f6f8;
+    border: 2px solid #121416;
     padding: 8px 16px;
     border-radius: 20px;
 }
@@ -851,7 +957,7 @@ body {
     padding: 30px 20px;
     margin: 0 auto 30px;
     max-width: 1200px;
-    background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #e9eaec 0%, #f1f0f1 100%);
     border-radius: 15px;
     color: white;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -989,9 +1095,9 @@ body {
     padding: 30px 20px;
     margin: 0 auto 30px;
     max-width: 1200px;
-    background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #fefdff 100%);
     border-radius: 15px;
-    color: white;
+    color: rgb(47, 56, 124);
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
@@ -1000,7 +1106,7 @@ body {
     margin-bottom: 25px;
     font-size: clamp(1.5rem, 5vw, 1.75rem);
     font-weight: 700;
-    color: white;
+    color: rgb(0, 0, 0);
     position: relative;
     display: flex;
     align-items: center;
@@ -1033,11 +1139,11 @@ body {
     border-radius: 15px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.968);
 }
 
 .helpline-info h3 {
-    color: white;
+    color: rgb(11, 9, 9);
     font-size: clamp(1.1rem, 3vw, 1.3rem);
     font-weight: 600;
     margin-bottom: 15px;
@@ -1047,11 +1153,11 @@ body {
 }
 
 .helpline-info h3 i {
-    color: rgba(255,255,255,0.9);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .helpline-info p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(13, 11, 11, 0.9);
     margin-bottom: 15px;
     line-height: 1.5;
     font-size: clamp(0.9rem, 2.5vw, 1rem);
@@ -1064,7 +1170,7 @@ body {
 }
 
 .helpline-number {
-    background: rgba(255,255,255,0.15);
+    background: rgb(199, 198, 198);
     padding: 12px 15px;
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.3);
@@ -1078,11 +1184,11 @@ body {
 .helpline-number:hover {
     background: rgba(255,255,255,0.25);
     transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.751);
 }
 
 .helpline-number i {
-    color: white;
+    color: rgb(5, 5, 5);
     font-size: 18px;
     width: 24px;
 }
@@ -1090,11 +1196,11 @@ body {
 .helpline-number .number {
     font-weight: 600;
     font-size: clamp(0.9rem, 2.5vw, 1rem);
-    color: white;
+    color: rgb(20, 18, 18);
 }
 
 .helpline-number .description {
-    color: rgba(255,255,255,0.8);
+    color: rgba(31, 29, 29, 0.8);
     font-size: clamp(0.8rem, 2vw, 0.875rem);
 }
 
@@ -1121,10 +1227,10 @@ body {
     padding: 30px 20px;
     margin: 0 auto 30px;
     max-width: 1200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #fbfbfb 0%, #f2f1f4 100%);
     border-radius: 15px;
-    color: white;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.632);
 }
 
 .about-section h2 {
@@ -1132,7 +1238,7 @@ body {
     margin-bottom: 25px;
     font-size: clamp(1.5rem, 5vw, 1.75rem);
     font-weight: 700;
-    color: white;
+    color: rgb(0, 0, 0);
     position: relative;
     display: flex;
     align-items: center;
@@ -1201,7 +1307,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(45, 102, 145);
     font-size: 20px;
     margin: 0 auto 15px;
     border: 2px solid rgba(255,255,255,0.3);
@@ -1209,20 +1315,20 @@ body {
 }
 
 .about-card:hover .about-icon {
-    background: white;
+    background: rgb(255, 153, 69);
     color: #667eea;
     transform: scale(1.1);
 }
 
 .about-card h3 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 600;
     margin-bottom: 10px;
     font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 .about-card p {
-    color: rgba(255,255,255,0.8);
+    color: rgba(0, 0, 0, 0.8);
     font-size: clamp(0.85rem, 2vw, 0.9rem);
     line-height: 1.5;
     margin: 0 0 15px 0;
@@ -1230,26 +1336,26 @@ body {
 
 .about-link {
     display: inline-block;
-    color: rgba(255,255,255,0.9);
+    color: rgba(134, 28, 28, 0.9);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
     padding: 8px 16px;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(47, 45, 45, 0.99);
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .about-link:hover {
-    background: rgba(255,255,255,0.2);
-    color: white;
-    border-color: rgba(255,255,255,0.5);
+    background: rgba(165, 164, 164, 0.582);
+    color: rgb(255, 0, 0);
+    border-color: rgba(0, 0, 0, 0.963);
 }
 
 /* ===== FOOTER ===== */
 .footer {
-    background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    color: rgb(16, 13, 13);
     padding: 60px 5%;
 }
 
@@ -1260,6 +1366,20 @@ body {
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* columns inside footer for simple govt-style layout */
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+}
+
+.footer-column .social-icons {
+    margin-top: 10px;
 }
 
 .footer h2 {
@@ -1289,7 +1409,7 @@ body {
 
 .footer ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     transition: 0.3s;
 }
 
@@ -1313,9 +1433,9 @@ body {
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-    background: rgba(255,255,255,0.97);
+    background: rgba(46, 44, 44, 0.97);
     margin-right: 10px;
-    color: white;
+    color: rgb(51, 48, 48);
     text-decoration: none;
     transition: 0.3s;
     font-size: 18px;
@@ -1329,7 +1449,7 @@ body {
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
-    border-top: 1px solid rgba(255,255,255,0.966);
+    border-top: 1px solid rgba(18, 34, 64, 0.966);
     padding-top: 20px;
     font-size: clamp(0.8rem, 2vw, 0.875rem);
 }
@@ -1344,6 +1464,16 @@ body {
     }
 }
 
+/* animation used for mobile sidebar sliding */
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0); }
+}
+@keyframes slideOut {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
 @media (max-width: 992px) {
     /* Show hamburger */
     .hamburger {
@@ -1355,19 +1485,42 @@ body {
     }
     .sidebar {
         position: fixed;
-        top: 0;
+        /* slide down under header instead of covering it */
+        top: 90px; /* match container margin-top / header height */
         left: -100%; /* keep sidebar left side */
         right: auto;
         width: 280px;
-        height: 100vh;
-        background: linear-gradient(135deg, #010b3a 0%, #764ba2 100%);
-        transition: left 0.3s ease;
+        /* only as tall as contents, but no more than viewport */
+        height: auto;
+        max-height: calc(90vh - 120px); /* allow remaining viewport below header */
+        overflow-y: auto;
+        /* use same gradient background as desktop but slightly transparent */
+        background: linear-gradient(135deg, rgba(51, 62, 110, 0.779) 0%, rgba(82, 53, 112, 0.703) 100%);
+        /* a bit of blur can soften colours if needed */
+        backdrop-filter: blur(4px);
+        transition: background 0.3s ease, transform 0.3s ease;
+        transform: translateX(-100%);
         z-index: 2500;
-        padding-top: 80px; /* avoid header overlap */
+        padding-top: 6px; /* reduced space at top */
+        padding-bottom: 0; /* remove bottom space */
         box-shadow: 2px 0 20px rgba(0,0,0,0.3);
     }
     .sidebar.open {
         left: 0;
+        transform: translateX(0);
+        animation: slideIn 0.3s forwards;
+        /* when opening, recalc max-height in case content changed */
+    }
+    .sidebar.closing {
+        animation: slideOut 0.3s forwards;
+    }
+    /* reset menu item backgrounds to match desktop styling */
+    .sidebar-menu li {
+        background: rgba(255,255,255,0.05);
+    }
+    .sidebar-menu li a {
+        background: transparent;
+        border-radius: 4px;
     }
     .main-content {
         margin-left: 0;
@@ -1549,3 +1702,10 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/* mobile sidebar – no empty space above/below the items */
+
+
+
+
+
+
